@@ -1,0 +1,52 @@
+.footer {
+  display: grid;
+  margin: 0 auto;
+  border: 10px solid rgba(black, .1);
+  width: 960px;
+  height: 300px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 300px;
+  text-align: center;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.footer .order-list{
+  grid-column: 1/4;
+  grid-row: 1/4;
+  overflow: scroll;
+}
+
+.footer .remaining-time-container{
+  grid-column: 4/5;
+  grid-row: 1/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2.0rem;
+}
+
+.remaining-time-container .remaining-time{
+  font-size: 2.0rem;
+}
+
+.footer .delete-all-items{
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
+
+.footer .selected-item-container{
+  grid-column: 4/6;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer .order-btn{
+  grid-column: 4/6;
+  grid-row: 3/4;
+}

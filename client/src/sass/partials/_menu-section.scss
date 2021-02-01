@@ -1,0 +1,80 @@
+.menu-list {
+  width: 880px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background: #eee;
+  position: relative;
+
+  .menu-item {
+    width: 200px;
+    margin: 10px;
+
+    figure {
+      width: 100%;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+      cursor: pointer;
+
+      .menu-img {
+        width: 80%;
+        border-bottom: 2px solid rgba(0, 0, 0, .3);
+        padding-bottom: 10px;
+      }
+
+      .menu-title {
+        margin-top: 10px;
+        color: gray;
+
+        font: {
+          size: 18px;
+          weight: 700;
+        }
+      }
+
+      .menu-price {
+        display: block;
+        margin-top: 10px;
+        color: orangered;
+
+        font: {
+          size: 18px;
+          weight: 700;
+        }
+      }
+    }
+  }
+}
+
+button {
+  position: absolute;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, .3);
+  top: 50%;
+  background: rgba(253, 253, 0, .7);
+  border: 1px solid rgba(0, 0, 0, .1);
+  width: 50px;
+  height: 100px;
+  transform: translate(0, -50%);
+
+  font: {
+    size: 30px;
+    weight: 700;
+  }
+}
+
+.btn-prev {
+  left: 0;
+}
+
+.btn-next {
+  right: 0;
+
+}

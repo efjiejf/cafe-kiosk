@@ -1,11 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./dist/css/style.css" />
-    <script defer src="dist/js/bundle.js"></script>
-  </head>
-  <body></body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./dist/css/style.css" />
+  <script defer src="dist/js/bundle.js"></script>
+</head>
+
+<body>
+
+  <footer>
+    <div class="remaining-time-container">남은시간 <span class="remaining-time"></span>초</div>
+    <ul class="order-list">
+      <li id="1" class="order-item">
+        <i class="remove-todo far fa-times-circle"></i>
+        <label for="item-name">아메리카노 좋아좋아좋아</label>
+        <button>-</button>
+        <span class="item-num"></span>
+        <button>+</button>
+        <span class="item-price"></span>
+      </li>
+      <div class="selected-item-container">선택한 상품 <span class="selected-item-num"></span>개</div>
+      <button class="order-btn"><span class="total-price"></span>원 결제하기</button>
+      <button class="delete-all-items">전체삭제</button>
+    </ul>
+  </footer>
+</body>
+
 </html>

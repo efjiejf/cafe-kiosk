@@ -7,7 +7,7 @@ function menuRender(data) {
   <figure id="${menu.id}">
     <img id="${menu.id}" class="menu-img" src="${menu.imgUrl}">
     <figcaption id="${menu.id}" class="menu-title">${menu.menuName}</figcaption>
-    <span class="menu-price">${menu.price}</span>
+    <span class="menu-price">${menu.price}원</span>
   </figure>        
 </li>`
     )

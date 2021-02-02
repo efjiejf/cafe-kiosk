@@ -54,5 +54,3 @@ $modalContainer.addEventListener('click', (e) => {
   }
   $modalContainer.style.display = 'none';
 });
-
-export default menus;

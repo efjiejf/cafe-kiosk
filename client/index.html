@@ -26,56 +26,61 @@
     <ul class="order-list">
       <li id="1" class="order-item">
         <i class="remove-item far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
+        <span class="item-name">아이스 아메리카노(S)</span>
         <button class="minus">-</button>
         <span class="item-num">1</span>
         <button class="plus">+</button>
-        <span class="item-price"></span>
+        <span class="item-price">3000원</span>
       </li>
-      <li id="1" class="order-item">
+      <!-- `<li id="${id}" class="order-item">
         <i class="remove-item far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
+        <span class="$item-name">${name}</span>
         <button class="minus">-</button>
-        <span class="item-num">1</span>
+        <span class="item-num">${num}</span>
         <button class="plus">+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-item far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button class="minus">-</button>
-        <span class="item-num">1</span>
-        <button class="plus">+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-item far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button class="minus">-</button>
-        <span class="item-num">1</span>
-        <button class="plus">+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-item far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button class="minus">-</button>
-        <span class="item-num">1</span>
-        <button class="plus">+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-item far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button class="minus">-</button>
-        <span class="item-num">1</span>
-        <button class="plus">+</button>
-        <span class="item-price"></span>
-      </li>
+        <span class="item-price">${price}원</span>
+      </li>` -->
     </ul>
     <div class="selected-item-container">선택한 상품 <span class="selected-item-num">1</span>개</div>
     <button class="order-btn"><span class="total-price">3000</span>원 결제하기</button>
     <button class="delete-all-items">전체삭제</button>
+
+    <div class="pay-modal-container">
+      <div class="pay-modal">
+        <h3 class="pay-modal-heading">주문리스트</h3>
+        <p class="pay-modal-text">
+          <span>주문리스트</span>를 확인해 주세요.
+        </p>
+
+        <div>
+          <div class="pay-list-head">
+            <span>메뉴</span>
+            <span>수량</span>
+            <span>가격</span>
+          </div>
+
+          <ul class="pay-list">
+            <li id="1" class="pay-item">
+              <label for="item-name">아이스 아메리카노(S)</label>
+              <span class="item-num">1</span>
+              <span><span class="item-price">3000</span>원</span>
+            </li>
+            <!-- `<li id="${id}" class="pay-item">
+              <span class="item-name">${item}</span>
+              <span class="item-num">${num}</span>
+              <span><span class="item-price">${price}</span>원</span>
+            </li>` -->
+          </ul>
+        </div>
+
+        <div class="pay-result">
+          <span>총 수량 <span class="total-item-num">3</span>개</span>
+          <span>총 결제금액 <span class="total-item-price">3</span>원</span>
+        </div>
+        <button class="pay-result-check">확 인</button>
+
+      </div>
+    </div>
   </footer>
 </body>
 

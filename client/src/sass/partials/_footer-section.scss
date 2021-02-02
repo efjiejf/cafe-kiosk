@@ -63,29 +63,22 @@
   top: 30%;
   left: 10%;
   cursor: pointer;
+  vertical-align: middle;
   color: gray;
   font-size: 1.4rem;
 }
 
 // 리스트 이름
-.order-item label,
-.item-num {
+.item-name{
   vertical-align: middle;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-// 리스트 수량 조절 버튼
-.minus,
-.plus {
-  border: 0;
   font-size: 1.4rem;
-  border-radius: 5px;
-  margin: 0 5px;
+  font-weight: bold;
 }
 
 // 리스트 가격
 .item-price {
+  margin-left: 30px;
+  vertical-align: middle;
   font-size: 1.4rem;
   font-weight: bold;
 }

@@ -21,7 +21,7 @@ function modalRender(menu) {
       : ''
   }
 </li>
-<li class="modal-item modal-order">
+<li id="${menu.id}" class="modal-item modal-order">
   <button class="btn-order">주문 담기</button>
   <button class="btn-close">취소</button>
 </li>`;

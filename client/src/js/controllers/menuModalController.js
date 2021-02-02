@@ -20,6 +20,11 @@ const setSizeUpPrice = (e) => {
   document.querySelector('.modal-price').textContent = `${target.price}원`;
 };
 
+const setActiveOrder = (e) => {
+  const target = menus.find((menu) => menu.id === +e.target.parentNode.id);
+  console.log(target);
+  target.active = true;
+};
 //Event
 
 document.addEventListener('DOMContentLoaded', (e) => {
@@ -29,6 +34,7 @@ document.addEventListener('DOMContentLoaded', (e) => {
       menus = menu;
     });
 });
+
 $modalContainer.addEventListener('click', (e) => {
   if (e.target.matches('.btn-close')) {
     $modalContainer.style.display = 'none';
@@ -38,5 +44,9 @@ $modalContainer.addEventListener('click', (e) => {
   } else if (e.target.matches('.btn-addshot')) {
     setAddShotPrice(e);
     e.target.disabled = true;
+  } else if (e.target.matches('.btn-order')) {
+    setActiveOrder(e);
+    console.log(menus);
+    $modalContainer.style.display = 'none';
   }
 });

@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="./dist/css/style.css" />
   <script defer src="dist/js/bundle.js"></script>
 </head>
@@ -14,168 +16,41 @@
     <div class="main__container">
       <ul class="menu-list">
       </ul>
-      <div class="btn-group">
+      <!-- <div class="btn-group">
         <button class="btn-prev" type="button">
           < </button> <button class="btn-next" type="button"> >
         </button>
+      </div> -->
+      <div class="menu-modal-container">
+        <ul class="modal">
+          <li class="modal-item">
+            <figure>
+              <img class="modal-img"
+                src="https://cdn.shopify.com/s/files/1/0273/4535/4826/products/coldbrew_69e25680-9a16-41ed-ad47-e42d7b201b6a.jpg?v=1587042356">
+              <div>
+                <figcaption class="modal-title">아이스 아메리카노</figcaption>
+                <span class="modal-price">2000원</span>
+              </div>
+            </figure>
+          </li>
+          <li class="modal-item">
+            <button class="btn btn-size-up"><i class="fa fa-coffee" aria-hidden="true"></i> 사이즈 업</button>
+            <span class="size-up-price">1000원</span>
+            <button class="btn btn-addshot"><i class="fa fa-coffee" aria-hidden="true"></i> 샷 추가</button>
+            <span class="size-up-price">1000원</span>
+          </li>
+          <li class="modal-item">
+            <button class="btn-close">주문 담기</button>
+            <button class="btn-close">취소</button>
+          </li>
+        </ul>
       </div>
     </div>
   </main>
   <footer class="footer">
     <div class="remaining-time-container">남은시간 <span class="remaining-time">5</span>초</div>
     <ul class="order-list">
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
-      <li id="1" class="order-item">
-        <i class="remove-todo far fa-times-circle"></i>
-        <label for="item-name">아메리카노 좋아좋아좋아</label>
-        <button>-</button>
-        <span class="item-num">1</span>
-        <button>+</button>
-        <span class="item-price"></span>
-      </li>
+
     </ul>
     <div class="selected-item-container">선택한 상품 <span class="selected-item-num">1</span>개</div>
     <button class="order-btn"><span class="total-price">3000</span>원 결제하기</button>

@@ -1,12 +1,12 @@
 const $menuList = document.querySelector('.menu-list');
 
-function render(data) {
+function menuRender(data) {
   $menuList.innerHTML = data
     .map(
       (menu) => `<li id="${menu.id}" class="menu-item">
-  <figure>
-    <img class="menu-img" src="${menu.imgUrl}">
-    <figcaption class="menu-title">${menu.menuName}</figcaption>
+  <figure id="${menu.id}">
+    <img id="${menu.id}" class="menu-img" src="${menu.imgUrl}">
+    <figcaption id="${menu.id}" class="menu-title">${menu.menuName}</figcaption>
     <span class="menu-price">${menu.price}</span>
   </figure>        
 </li>`
@@ -14,4 +14,4 @@ function render(data) {
     .join('');
 }
 
-export default render;
+export default menuRender;

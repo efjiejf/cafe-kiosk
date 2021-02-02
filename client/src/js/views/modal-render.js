@@ -12,7 +12,7 @@ function modalRender(menu) {
   </figure>
 </li>
 <li id="${menu.id}" class="modal-item modal-option">
-  <button class="btn btn-size-up"><i class="fa fa-coffee" aria-hidden="true"></i> 사이즈 업</button>
+  <button class="btn btn-size-up"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i> 사이즈 업</button>
   <span class="size-up-price">${menu.sizeUpPrice}원</span> 
   ${
     menu.shot

@@ -13,6 +13,17 @@ let data = {
       imgUrl:
         'https://cdn.shopify.com/s/files/1/0273/4535/4826/products/coldbrew_69e25680-9a16-41ed-ad47-e42d7b201b6a.jpg?v=1587042356',
       price: 2500,
+      active: true,
+      shot: true,
+      shotPrice: 1000,
+      sizeUpPrice: 1000,
+    },
+    {
+      id: 2,
+      menuName: '아이스 라떼',
+      imgUrl:
+        'https://cdn.shopify.com/s/files/1/0273/4535/4826/products/coldbrew_69e25680-9a16-41ed-ad47-e42d7b201b6a.jpg?v=1587042356',
+      price: 3500,
       active: false,
       shot: true,
       shotPrice: 1000,
@@ -31,6 +42,17 @@ let data = {
       shotPrice: 1000,
       sizeUpPrice: 1000,
     },
+    {
+      id: 2,
+      menuName: '라떼',
+      imgUrl:
+        'https://w7.pngwing.com/pngs/423/445/png-transparent-coffee-cup-caffe-americano-cafe-caffeine-brewed-coffee-cafe-coffee-brewed-coffee.png',
+      price: 3000,
+      active: true,
+      shot: true,
+      shotPrice: 1000,
+      sizeUpPrice: 1000,
+    },
   ],
   seasonMenu: [
     {
@@ -38,7 +60,7 @@ let data = {
       menuName: '골드망고 스무디',
       imgUrl: 'https://gdimg.gmarket.co.kr/1803923937/still/600?ver=1589438675',
       price: 4000,
-      active: false,
+      active: true,
       shot: false,
       shotPrice: 1000,
       sizeUpPrice: 1000,
@@ -106,6 +128,9 @@ let data = {
     },
   ],
 };
+app.get('/data', (req, res) => {
+  res.send(data);
+});
 
 app.get('/icemenu', (req, res) => {
   res.send(data.iceMenu);

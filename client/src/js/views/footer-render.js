@@ -1,6 +1,5 @@
 // order list
-
-// 주문내역/ 결제내역 랜더 함수
+// 주문내역 랜더 함수
 const render = list => {
   const $orderList = document.querySelector('.order-list');
   const $selectedItemNum = document.querySelector('.selected-item-num');
@@ -14,7 +13,7 @@ const render = list => {
   let orderHtml = '';
   let payHtml = '';
 
-  _list = list.filter(v => v.active);
+  _list = list.filter((v) => v.active);
 
   _list.forEach(({ id, menuName, price }) => {
     orderHtml += `<li id="${id}" class="order-item">
@@ -39,8 +38,6 @@ const render = list => {
 
   $totalItemNum.textContent = _list.length + '개';
   $totalItemPrice.textContent = $totalPrice.textContent;
-
-  // list.forEach(v => { v.active = false; });
 };
 
 // 남은 시간 영역

@@ -1,3 +1,6 @@
 import * as model from './model/model';
-import Controller from './controllers/menuController';
+
+import menuController from './controllers/menuController';
+import menuModalController from './controllers/menuModalController';
+
 import footerController from './controllers/footerController';

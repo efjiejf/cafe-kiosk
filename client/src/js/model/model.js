@@ -3,7 +3,7 @@ import axios from 'axios';
 export default {
   _state: 'seasonmenu',
 
-  getSeasonMenu(url) {
+  getMenu(url) {
     return axios.get(url).then(({ data }) => data);
   },
 

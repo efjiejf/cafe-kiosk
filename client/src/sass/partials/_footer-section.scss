@@ -1,6 +1,6 @@
 // footer
 .footer {
-  background: rgb(142, 159, 170);
+  background: #eee;
   display: grid;
   margin: 0 auto;
   padding: 15px;
@@ -169,11 +169,11 @@
   background: rgba(0, 0, 0, .3);
 }
 
-.footer-modal-visible{
+.footer-modal-visible {
   display: flex;
 }
 
-.footer-modal-invisible{
+.footer-modal-invisible {
   display: none;
 }
 
@@ -271,7 +271,7 @@
   letter-spacing: 15px;
 }
 
-.pay-result-cancel{
+.pay-result-cancel {
   background: rgb(100, 92, 92);
   margin: 10px;
   width: 40%;

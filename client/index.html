@@ -100,7 +100,7 @@
   </main>
   <!-- footer 주문 내역 영역 -->
   <footer class="footer">
-    <div class="remaining-time-container">남은시간 <span class="remaining-time">5</span>초</div>
+    <div class="remaining-time-container">남은시간 <span class="remaining-time"></span>초</div>
     <ul class="order-list">
       <!-- `<li id="${id}" class="order-item">
         <i class="remove-item far fa-times-circle"></i>
@@ -108,8 +108,8 @@
         <span class="item-price">${price}원</span>
         </li>` -->
     </ul>
-    <div class="selected-item-container">선택한 상품 <span class="selected-item-num"></span>개</div>
-    <button class="order-btn"><span class="total-price"></span>원 결제하기</button>
+    <div class="selected-item-container">선택한 상품 <span class="selected-item-num"></span></div>
+    <button class="order-btn"><span class="total-price"></span> 결제하기</button>
     <button class="delete-all-items">전체삭제</button>
 
     <!-- 결제 내역 모달 영역 -->
@@ -127,6 +127,7 @@
           </div>
 
           <ul class="pay-list">
+            <li class="pay-item item-name">주문하신 음료가 없습니다.</li>
             <!-- `<li id="${id}" class="pay-item">
             <span class="item-name">${item}</span>
             <span><span class="item-price">${price}</span>원</span>
@@ -135,8 +136,8 @@
         </div>
 
         <div class="pay-result">
-          <span>총 수량 <span class="total-item-num"></span>개</span>
-          <span>총 결제금액 <span class="total-item-price"></span>원</span>
+          <span>총 수량 <span class="total-item-num"></span></span>
+          <span>총 결제금액 <span class="total-item-price"></span></span>
         </div>
         <div>
           <button class="pay-result-check">확 인</button>

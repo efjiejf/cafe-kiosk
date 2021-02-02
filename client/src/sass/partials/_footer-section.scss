@@ -177,7 +177,6 @@
   flex-direction: column;
   justify-content: space-between;
   width: 500px;
-  height: 500px;
   background: #fff;
   border: 2px solid gray;
   border-radius: 10px;
@@ -214,8 +213,26 @@
 .pay-list {
   background: #fff;
   margin-right: 15px;
+  min-height: 100px;
   border: 0;
   border-radius: 10px;
+  overflow-y: auto;
+}
+.pay-list::-webkit-scrollbar {
+  width: 10px;
+}
+
+.pay-list::-webkit-scrollbar-thumb {
+  background-color: #6b6d74;
+  border-radius: 10px;
+  background-clip: padding-box;
+  border: 2px solid transparent;
+}
+
+.pay-list::-webkit-scrollbar-track {
+  background-color: grey;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
 }
 
 // 결제 내역

@@ -1,5 +1,5 @@
 import model from '../model/model';
-import modalRender from '../views/modal-render';
+import footerRender from '../views/footer-render';
 
 //State
 let menus = [];
@@ -46,7 +46,9 @@ $modalContainer.addEventListener('click', (e) => {
     e.target.disabled = true;
   } else if (e.target.matches('.btn-order')) {
     setActiveOrder(e);
-    console.log(menus);
+    footerRender(menus);
     $modalContainer.style.display = 'none';
   }
 });
+
+export default menus;

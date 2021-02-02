@@ -1,74 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./dist/css/style.css" />
-    <script defer src="dist/js/bundle.js"></script>
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="header-container">
-        <button class="btn-home btn"><img src="#" alt="home image" /></button>
-        <h1 class="home"><a href="index.html"></a> Easy KIOSK</h1>
-        <div class="dev">
-          <p>Add beverage</p>
-        </div>
-      </div>
-      <div class="nav-container">
-        <nav class="main-nav">
-          <button class="arrow btn-left btn">&lt;</button>
-          <ul class="menu-main list">
-            <li class="menu-item"><button>시즌 메뉴</button></li>
-            <li class="menu-item"><button>커피(HOT)</button></li>
-            <li class="menu-item"><button>커피(ICE)</button></li>
-            <li class="menu-item"><button>스무디&amp;프라페</button></li>
-          </ul>
-          <button class="arrow btn-right btn">&gt;</button>
-        </nav>
-      </div>
-      <div class="modal-container">
-        <p>Add beverages</p>
-        <button class="btn-close btn">X</button>
-        <ul class="modal-list list">
-          <li id="1" class="modal-item">
-            <figure>
-              <img src="#" alt="#" />
-            </figure>
-            <label for="1">something</label>
-            <input id="1" class="price" type="number" />
-            <i class="remove">x</i>
-          </li>
-          <li id="2" class="modal-item">
-            <figure>
-              <img src="#" alt="#" />
-            </figure>
-            <label for="2">something</label>
-            <input id="2" class="price" type="number" />
-            <i class="remove">x</i>
-          </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./dist/css/style.css" />
+  <script defer src="dist/js/bundle.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header-container">
+      <button class="btn-home btn trans">
+        <i class="fas fa-home"></i>
+      </button>
+      <h1 class="home"><span>Easy</span> <span>KIOSK</span></h1>
+      <button class="btn-dev btn trans">
+        <i class="fas fa-plus-square"></i>
+      </button>
+    </div>
+    <div class="nav-container">
+      <nav class="main-nav">
+        <button class="btn-left btn trans">
+          <i class="fas fa-angle-left"></i>
+        </button>
+        <ul class="menu-main list">
+          <li class="menu-item"><button class="trans">시즌 메뉴</button></li>
+          <li class="menu-item"><button class="trans">커피(HOT)</button></li>
+          <li class="menu-item"><button class="trans">커피(ICE)</button></li>
+          <li class="menu-item"><button class="trans">스무디&amp;프라페</button></li>
         </ul>
-      </div>
-    </header>
-    <main>
-      <div class="main__container">
-        <ul class="menu-list"></ul>
-        <!-- <div class="btn-group">
+        <button class="btn-right btn trans">
+          <i class="fas fa-angle-right"></i>
+        </button>
+      </nav>
+    </div>
+    <div class="modal-container">
+      <p>
+        Add beverages
+      </p>
+      <button class="btn-close btn">X</button>
+      <ul class="modal-list list">
+        <li id="1" class="modal-item">
+          <figure>
+            <img src="#" alt="#" />
+          </figure>
+          <label for="1">something</label>
+          <input id="1" class="price" type="number">
+          <i class="remove">x</i>
+        </li>
+        <li id="2" class="modal-item">
+          <figure>
+            <img src="#" alt="#" />
+          </figure>
+          <label for="2">something</label>
+          <input id="2" class="price" type="number">
+          <i class="remove">x</i>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="main__container">
+      <ul class="menu-list">
+      </ul>
+      <!-- <div class="btn-group">
         <button class="btn-prev" type="button">
           < </button> <button class="btn-next" type="button"> >
         </button>
       </div> -->
-        <div class="menu-modal-container">
-          <ul class="modal">
-            <!-- <li class="modal-item">
+      <div class="menu-modal-container">
+        <ul class="modal">
+          <!-- <li class="modal-item">
             <figure>
               <img class="modal-img"
                 src="https://cdn.shopify.com/s/files/1/0273/4535/4826/products/coldbrew_69e25680-9a16-41ed-ad47-e42d7b201b6a.jpg?v=1587042356">
@@ -88,73 +94,75 @@
             <button class="btn-order">주문 담기</button>
             <button class="btn-close">취소</button>
           </li> -->
+        </ul>
+      </div>
+    </div>
+  </main>
+  <!-- footer 주문 내역 영역 -->
+  <footer class="footer">
+    <div class="remaining-time-container">남은시간 <span class="remaining-time">5</span>초</div>
+    <ul class="order-list">
+      <li id="1" class="order-item">
+        <i class="remove-item far fa-times-circle"></i>
+        <span class="item-name">아이스 아메리카노(S)</span>
+        <button class="minus">-</button>
+        <span class="item-num">1</span>
+        <button class="plus">+</button>
+        <span class="item-price">3000원</span>
+      </li>
+      <!-- `<li id="${id}" class="order-item">
+      <i class="remove-item far fa-times-circle"></i>
+      <span class="$item-name">${name}</span>
+      <button class="minus">-</button>
+      <span class="item-num">${num}</span>
+      <button class="plus">+</button>
+      <span class="item-price">${price}원</span>
+    </li>` -->
+    </ul>
+    <div class="selected-item-container">선택한 상품 <span class="selected-item-num">1</span>개</div>
+    <button class="order-btn"><span class="total-price">3000</span>원 결제하기</button>
+    <button class="delete-all-items">전체삭제</button>
+
+    <!-- 결제 내역 모달 영역 -->
+    <div class="pay-modal-container footer-modal-invisible">
+      <div class="pay-modal">
+        <h3 class="pay-modal-heading">주문리스트</h3>
+        <p class="pay-modal-text">
+          <span>주문리스트</span>를 확인해 주세요.
+        </p>
+
+        <div>
+          <div class="pay-list-head">
+            <span>메뉴</span>
+            <span>수량</span>
+            <span>가격</span>
+          </div>
+
+          <ul class="pay-list">
+            <li id="1" class="pay-item">
+              <label for="item-name">아이스 아메리카노(S)</label>
+              <span class="item-num">1</span>
+              <span><span class="item-price">3000</span>원</span>
+            </li>
+            <!-- `<li id="${id}" class="pay-item">
+            <span class="item-name">${item}</span>
+            <span class="item-num">${num}</span>
+            <span><span class="item-price">${price}</span>원</span>
+          </li>` -->
           </ul>
         </div>
-      </div>
-    </main>
-    <footer class="footer">
-      <div class="remaining-time-container">
-        남은시간 <span class="remaining-time">5</span>초
-      </div>
-      <ul class="order-list">
-        <li id="1" class="order-item">
-          <i class="remove-item far fa-times-circle"></i>
-          <span class="item-name">아이스 아메리카노(S)</span>
-          <button class="minus">-</button>
-          <span class="item-num">1</span>
-          <button class="plus">+</button>
-          <span class="item-price">3000원</span>
-        </li>
-        <!-- `<li id="${id}" class="order-item">
-        <i class="remove-item far fa-times-circle"></i>
-        <span class="$item-name">${name}</span>
-        <button class="minus">-</button>
-        <span class="item-num">${num}</span>
-        <button class="plus">+</button>
-        <span class="item-price">${price}원</span>
-      </li>` -->
-      </ul>
-      <div class="selected-item-container">
-        선택한 상품 <span class="selected-item-num">1</span>개
-      </div>
-      <button class="order-btn">
-        <span class="total-price">3000</span>원 결제하기
-      </button>
-      <button class="delete-all-items">전체삭제</button>
 
-      <div class="pay-modal-container">
-        <div class="pay-modal">
-          <h3 class="pay-modal-heading">주문리스트</h3>
-          <p class="pay-modal-text"><span>주문리스트</span>를 확인해 주세요.</p>
-
-          <div>
-            <div class="pay-list-head">
-              <span>메뉴</span>
-              <span>수량</span>
-              <span>가격</span>
-            </div>
-
-            <ul class="pay-list">
-              <li id="1" class="pay-item">
-                <label for="item-name">아이스 아메리카노(S)</label>
-                <span class="item-num">1</span>
-                <span><span class="item-price">3000</span>원</span>
-              </li>
-              <!-- `<li id="${id}" class="pay-item">
-              <span class="item-name">${item}</span>
-              <span class="item-num">${num}</span>
-              <span><span class="item-price">${price}</span>원</span>
-            </li>` -->
-            </ul>
-          </div>
-
-          <div class="pay-result">
-            <span>총 수량 <span class="total-item-num">3</span>개</span>
-            <span>총 결제금액 <span class="total-item-price">3</span>원</span>
-          </div>
+        <div class="pay-result">
+          <span>총 수량 <span class="total-item-num">3</span>개</span>
+          <span>총 결제금액 <span class="total-item-price">3</span>원</span>
+        </div>
+        <div>
           <button class="pay-result-check">확 인</button>
+          <button class="pay-result-cancel">취 소</button>
         </div>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>

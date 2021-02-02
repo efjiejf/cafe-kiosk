@@ -114,13 +114,22 @@
         background: inherit;
       }
 
+      .btn-order {
+        background: tomato;
+      }
+
+      .btn-close {
+        background: rgb(100, 92, 92);
+      }
+
       &:last-child {
         border-bottom: none;
 
         button {
           width: 43%;
           height: 40px;
-          background: inherit;
+          color: #fff;
+          border: 1px solid #fff;
 
           font: {
             size: 20px;

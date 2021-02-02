@@ -1,7 +1,6 @@
 // order list
-
 // 주문내역 랜더 함수
-const render = list => {
+const render = (list) => {
   const $orderList = document.querySelector('.order-list');
   const $selectedItemNum = document.querySelector('.selected-item-num');
   const $totalPrice = document.querySelector('.total-price');
@@ -14,7 +13,7 @@ const render = list => {
   let orderHtml = '';
   let payHtml = '';
 
-  _list = list.filter(v => v.active);
+  _list = list.filter((v) => v.active);
 
   _list.forEach(({ id, menuName, price }) => {
     orderHtml += `<li id="${id}" class="order-item">
@@ -39,8 +38,6 @@ const render = list => {
 
   $totalItemNum.textContent = _list.length;
   $totalItemPrice.textContent = $totalPrice.textContent;
-
-  list.forEach(v => { v.active = false; });
 };
 
 // payment list

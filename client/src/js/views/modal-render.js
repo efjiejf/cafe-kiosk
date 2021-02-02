@@ -11,14 +11,14 @@ function modalRender(menu) {
     </div>
   </figure>
 </li>
-<li class="modal-item">
+<li class="modal-item modal-option">
   <button class="btn btn-size-up"><i class="fa fa-coffee" aria-hidden="true"></i> 사이즈 업</button>
   <span class="size-up-price">1000원</span>
   <button class="btn btn-addshot"><i class="fa fa-coffee" aria-hidden="true"></i> 샷 추가</button>
   <span class="size-up-price">1000원</span>
 </li>
-<li class="modal-item">
-  <button class="btn-close">주문 담기</button>
+<li class="modal-item modal-order">
+  <button class="btn-order">주문 담기</button>
   <button class="btn-close">취소</button>
 </li>`;
 }

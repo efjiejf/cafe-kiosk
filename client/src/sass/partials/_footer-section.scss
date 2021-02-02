@@ -19,7 +19,7 @@
 }
 
 // 주문 목록 컨테이너
-.footer .order-list{
+.footer .order-list {
   grid-column: 1/5;
   grid-row: 1/4;
   overflow-y: auto;
@@ -33,12 +33,14 @@
 .order-list::-webkit-scrollbar {
   width: 10px;
 }
+
 .order-list::-webkit-scrollbar-thumb {
   background-color: #6b6d74;
   border-radius: 10px;
   background-clip: padding-box;
   border: 2px solid transparent;
 }
+
 .order-list::-webkit-scrollbar-track {
   background-color: grey;
   border-radius: 10px;
@@ -69,14 +71,16 @@
 }
 
 // 리스트 이름
-.order-item label, .item-num{
+.order-item label,
+.item-num {
   vertical-align: middle;
   font-weight: bold;
   font-size: 1.2rem;
 }
 
 // 리스트 수량 조절 버튼
-.minus, .plus {
+.minus,
+.plus {
   border: 0;
   font-size: 1.4rem;
   border-radius: 5px;
@@ -85,12 +89,12 @@
 
 // 리스트 가격
 .item-price {
-  font-size:1.4rem;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
 // 남은 시간 컨테이너
-.footer .remaining-time-container{
+.footer .remaining-time-container {
   grid-column: 5/6;
   grid-row: 1/2;
   margin: 5px;
@@ -100,14 +104,14 @@
 }
 
 // 남은 시간 표시
-.remaining-time-container .remaining-time{
+.remaining-time-container .remaining-time {
   font-size: 2.5rem;
   color: tomato;
 }
 
 
 // 전체 삭제 버튼
-.footer .delete-all-items{
+.footer .delete-all-items {
   grid-column: 6/7;
   grid-row: 1/2;
   margin: 5px;
@@ -120,7 +124,7 @@
 }
 
 // 선택한 상품 컨테이너
-.footer .selected-item-container{
+.footer .selected-item-container {
   grid-column: 5/7;
   grid-row: 2/3;
   margin: 5px;
@@ -138,7 +142,7 @@
 }
 
 // 결제 버튼
-.footer .order-btn{
+.footer .order-btn {
   grid-column: 5/7;
   grid-row: 3/4;
   margin: 5px;
@@ -152,14 +156,14 @@
 }
 
 // 결제 버튼 금액
-.order-btn .total-price{
+.order-btn .total-price {
   font-size: 2.0rem
 }
 
 // 결제 결과 모달 컨테이너
-.pay-modal-container{
+.pay-modal-container {
   position: fixed;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   top: 0;
@@ -170,7 +174,7 @@
 }
 
 // 결제 모달창
-.pay-modal{
+.pay-modal {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -183,7 +187,7 @@
 }
 
 // 결제 제목
-.pay-modal-heading{
+.pay-modal-heading {
   font-size: 2.0rem;
   font-weight: bold;
   color: tomato;
@@ -191,16 +195,16 @@
 }
 
 // 결제 단락
-.pay-modal-text{
+.pay-modal-text {
   font-size: 1.4rem;
   font-weight: bold;
   margin: 20px;
 }
 
 // 결제 목록 제목
-.pay-list-head{
+.pay-list-head {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-content: center;
   width: 100%;
   height: 30px;
@@ -210,7 +214,7 @@
 }
 
 // 결제 목록 컨테이너
-.pay-list{
+.pay-list {
   background: #fff;
   margin-right: 15px;
   border: 0;
@@ -220,7 +224,7 @@
 // 결제 내역
 .pay-item {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   align-content: center;
   height: 30px;
   padding: 10px 15px;
@@ -232,7 +236,7 @@
 }
 
 // 결제 총 내역
-.pay-result{
+.pay-result {
   display: flex;
   justify-content: space-around;
   align-content: center;
@@ -242,15 +246,15 @@
   font-weight: bold;
 }
 
-.total-item-num{
+.total-item-num {
   color: tomato;
 }
 
-.total-item-price{
- color: blueviolet;
+.total-item-price {
+  color: blueviolet;
 }
 
-.pay-result-check{
+.pay-result-check {
   background: tomato;
   margin: 15px 15px 10px 25%;
   width: 50%;

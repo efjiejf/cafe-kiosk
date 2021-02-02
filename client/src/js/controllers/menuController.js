@@ -8,10 +8,16 @@ class MenuController {
     this.model = model;
     this.$menuList = document.querySelector('.menu-list');
     this.$modalContainer = document.querySelector('.menu-modal-container');
+    this.$modalCloseBtn = document.querySelector('.btn-close');
     this.$menuList.onclick = (e) => {
       if (e.target === e.currentTarget) return;
       this.$modalContainer.style.display = 'flex';
-      model.getSeasonMenu(`/seasonmenu/${e.target.id}`).then(modalRender);
+      this.model.getSeasonMenu(`/seasonmenu/${e.target.id}`).then(modalRender);
+    };
+    this.$modalContainer.onclick = (e) => {
+      console.log(e.target);
+      if (!e.target.matches('.btn-close')) return;
+      this.$modalContainer.style.display = 'none';
     };
   }
 }

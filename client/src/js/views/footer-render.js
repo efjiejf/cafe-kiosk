@@ -1,12 +1,12 @@
 import model from '../model/model';
 
 // order list
-// 주문내역 랜더 함수
+// 주문내역 랜더 식별자
 const $orderList = document.querySelector('.order-list');
 const $selectedItemNum = document.querySelector('.selected-item-num');
 const $totalPrice = document.querySelector('.total-price');
 const $orderBtn = document.querySelector('.order-btn');
-
+// 결제내역 랜더 식별자
 const $payList = document.querySelector('.pay-list');
 const $totalItemNum = document.querySelector('.total-item-num');
 const $totalItemPrice = document.querySelector('.total-item-price');
@@ -22,6 +22,7 @@ const changeButtonColor = () => {
   }
 };
 
+// 주문내역 랜더 함수
 const render = list => {
   let orderHtml = '';
   let payHtml = '';

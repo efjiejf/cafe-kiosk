@@ -3,9 +3,7 @@ import footerRender from '../views/footer-render';
 
 // State
 let menus = [];
-let activeMenu = [];
 
-console.log('hi');
 // DOM
 const $modalContainer = document.querySelector('.menu-modal-container');
 
@@ -38,8 +36,9 @@ const setActiveOrder = (e) => {
     ...menus.find((menu) => menu.id === +e.target.parentNode.id),
   };
   target.active = true;
-  activeMenu.push(target);
-  footerRender(activeMenu);
+  target.id = activeMenu.length;
+  model.menu.push(target);
+  footerRender(model.menu);
   initialize();
 };
 
@@ -57,3 +56,5 @@ $modalContainer.addEventListener('click', (e) => {
   }
   $modalContainer.style.display = 'none';
 });
+
+export default initialize;

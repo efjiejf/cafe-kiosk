@@ -2,7 +2,7 @@
 .footer {
   background: #eee;
   display: grid;
-  margin: 0 auto;
+  margin: 0 auto 15px;
   padding: 15px;
   width: 960px;
   height: 300px;
@@ -47,40 +47,28 @@
 // 주문 목록 리스트
 .order-item {
   position: relative;
-  height: 30px;
-  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
   margin-bottom: -1px;
+  padding: 10px 15px;
+  height: 30px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-color: #e7ecee;
   list-style: none;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(58, 57, 57);
 }
 
 // 주문 목록 리스트 삭제 버튼
 .remove-item {
   display: block;
-  position: absolute;
-  top: 30%;
-  left: 10%;
+  line-height: 1.5;
   cursor: pointer;
-  vertical-align: middle;
-  color: gray;
-  font-size: 1.4rem;
-}
-
-// 리스트 이름
-.item-name{
-  vertical-align: middle;
-  font-size: 1.4rem;
-  font-weight: bold;
-}
-
-// 리스트 가격
-.item-price {
-  margin-left: 30px;
-  vertical-align: middle;
-  font-size: 1.4rem;
-  font-weight: bold;
+  color: rgb(58, 57, 57);
 }
 
 // 남은 시간 컨테이너
@@ -132,17 +120,25 @@
 }
 
 // 결제 버튼
-.footer .order-btn {
+
+.footer .order-btn.order-btn-valid {
+  background: tomato;
+}
+
+.order-btn {
   grid-column: 5/7;
   grid-row: 3/4;
   margin: 5px;
-  background: tomato;
   border-radius: 10px;
   border: 0;
-
-  color: #fff;
   font-size: 1.4rem;
   font-weight: bold;
+  color: #fff;
+}
+
+.footer .order-btn.order-btn-invalid {
+  border: 1px solid #333;
+  background: gray;
 }
 
 // 결제 버튼 금액
@@ -241,12 +237,15 @@
   justify-content: space-around;
   align-content: center;
   height: 30px;
-  padding: 10px 15px;
-  margin-bottom: -1px;
+  padding: 10px 0;
   background-color: #fff;
   border: 1px solid #ddd;
   border-color: #e7ecee;
   list-style: none;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(58, 57, 57);
 }
 
 // 결제 총 내역
@@ -271,6 +270,7 @@
 .pay-result-check {
   background: tomato;
   margin: 10px;
+  padding-left: 5%;
   width: 40%;
   height: 80px;
   border: 0;
@@ -284,6 +284,7 @@
 .pay-result-cancel {
   background: rgb(100, 92, 92);
   margin: 10px;
+  padding-left: 5%;
   width: 40%;
   height: 80px;
   border: 0;

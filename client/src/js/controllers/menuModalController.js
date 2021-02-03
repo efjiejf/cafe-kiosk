@@ -1,9 +1,8 @@
 import model from '../model/model';
-import footerRender from '../views/footer-render';
+import * as footer from '../views/footer-render';
 
 //State
 let menus = [];
-let orderMenu = [];
 
 //DOM
 const $modalContainer = document.querySelector('.menu-modal-container');
@@ -38,15 +37,10 @@ const setActiveOrder = (e) => {
     ...menus.find((menu) => menu.id === +e.target.parentNode.id),
   };
   target.active = true;
-  target.id = orderMenu.length;
-  orderMenu.push(target);
-  footerRender(orderMenu);
+  target.id = model.menu.length;
+  model.menu.push(target);
+  footer.render(model.menu);
   initialize();
-};
-
-export const deleteAllItems = () => {
-  orderMenu = [];
-  footerRender(orderMenu);
 };
 
 //Event

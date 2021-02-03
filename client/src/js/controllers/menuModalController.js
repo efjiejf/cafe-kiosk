@@ -5,6 +5,7 @@ import footerRender from '../views/footer-render';
 let menus = [];
 let activeMenu = [];
 
+console.log('hi');
 // DOM
 const $modalContainer = document.querySelector('.menu-modal-container');
 

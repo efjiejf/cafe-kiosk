@@ -1,6 +1,5 @@
 import model from '../model/model';
 import * as footer from '../views/footer-render';
-import menus from './menuModalController';
 
 // 결제 모달 관련
 const $orderBtn = document.querySelector('.order-btn');
@@ -13,22 +12,31 @@ const $orderList = document.querySelector('.order-list');
 // 결제 모달 관련 이벤트 핸들러
 $orderBtn.onclick = () => {
   if (!model.menu.length) return;
-  $modalDisplay.classList.replace('footer-modal-invisible', 'footer-modal-visible');
+  $modalDisplay.classList.replace(
+    'footer-modal-invisible',
+    'footer-modal-visible'
+  );
 };
 
 $resultCheck.onclick = () => {
-  $modalDisplay.classList.replace('footer-modal-visible', 'footer-modal-invisible');
+  $modalDisplay.classList.replace(
+    'footer-modal-visible',
+    'footer-modal-invisible'
+  );
 };
 
 $resultCancel.onclick = () => {
-  $modalDisplay.classList.replace('footer-modal-visible', 'footer-modal-invisible');
+  $modalDisplay.classList.replace(
+    'footer-modal-visible',
+    'footer-modal-invisible'
+  );
 };
 
 $deleteAllItems.onclick = () => {
   footer.deleteAllItems();
 };
 
-$orderList.onclick = e => {
+$orderList.onclick = (e) => {
   if (e.target.classList.contains('.remove-item')) return;
   footer.removeItem(e.target.parentNode.id);
 };
@@ -43,13 +51,13 @@ $leftTime.textContent = num;
 const debounce = (callback, delay) => {
   let timerId;
 
-  return event => {
+  return (event) => {
     if (timerId) clearTimeout(timerId);
     timerId = setTimeout(callback, delay, event);
   };
 };
 
-window.onclick = debounce(e => {
+window.onclick = debounce((e) => {
   console.log('디바운스 작동', e.target.value);
 
   if (timerId) {

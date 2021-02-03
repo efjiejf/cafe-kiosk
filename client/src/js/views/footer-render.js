@@ -1,5 +1,4 @@
 import model from '../model/model';
-
 // order list
 // 주문내역 랜더 식별자
 const $orderList = document.querySelector('.order-list');
@@ -22,18 +21,14 @@ const changeButtonColor = () => {
   }
 };
 
-// 주문내역 랜더 함수
-const render = list => {
+
+const render = (list) => {
   let orderHtml = '';
   let payHtml = '';
 
   _list = list;
 
-  _list.forEach(({
-    id,
-    menuName,
-    price
-  }) => {
+  _list.forEach(({ id, menuName, price }) => {
     orderHtml += `<li id="${id}" class="order-item">
     <i class="remove-item far fa-times-circle"></i>
     <span class="item-name">${menuName}</span>
@@ -41,11 +36,7 @@ const render = list => {
     </li>`;
   });
 
-  _list.forEach(({
-    id,
-    menuName,
-    price
-  }) => {
+  _list.forEach(({ id, menuName, price }) => {
     payHtml += `<li id="${id}" class="pay-item">
     <span class="item-name">${menuName}</span>
     <span><span class="item-price">${price}</span>원</span>
@@ -57,7 +48,8 @@ const render = list => {
     $payList.innerHTML = payHtml;
 
     $selectedItemNum.textContent = _list.length + '개';
-    $totalPrice.textContent = _list.reduce((acc, cur) => acc + cur.price, 0) + '원';
+    $totalPrice.textContent =
+      _list.reduce((acc, cur) => acc + cur.price, 0) + '원';
 
     $totalItemNum.textContent = _list.length + '개';
     $totalItemPrice.textContent = $totalPrice.textContent;
@@ -81,8 +73,8 @@ const deleteAllItems = () => {
 };
 
 // removeItem
-const removeItem = id => {
-  model.menu = model.menu.filter(item => item.id !== +id);
+const removeItem = (id) => {
+  model.menu = model.menu.filter((item) => item.id !== +id);
   render(model.menu);
 };
 

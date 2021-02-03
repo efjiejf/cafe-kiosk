@@ -4,17 +4,17 @@ import * as footer from '../views/footer-render';
 //State
 let menus = [];
 
-
 //DOM
 const $modalContainer = document.querySelector('.menu-modal-container');
 
 //Function
-const initialize = () => {
-  model
-    .getMenu(`/${model.state}`) //
-    .then((menu) => {
-      menus = menu;
-    });
+const initialize = async () => {
+  try {
+    const menu = await model.getMenu(`/${model.state}`);
+    menus = menu;
+  } catch (e) {
+    console.error(e);
+  }
 };
 
 const setPrice = (e) => {

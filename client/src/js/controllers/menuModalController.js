@@ -22,9 +22,11 @@ const setPrice = (e) => {
 
   if (e.target.matches('.btn-size-up')) {
     target.price += target.sizeUpPrice;
+    target.menuName = `${target.menuName} / 사이즈 업 `;
     document.querySelector('.modal-price').textContent = `${target.price}원`;
   } else if (e.target.matches('.btn-addshot')) {
     target.price += target.shotPrice;
+    target.menuName = `${target.menuName} / 샷 추가 `;
     document.querySelector('.modal-price').textContent = `${target.price}원`;
   }
   e.target.disabled = true;
@@ -36,6 +38,7 @@ const setActiveOrder = (e) => {
   };
   target.active = true;
   activeMenu.push(target);
+  footerRender(activeMenu);
   initialize();
 };
 
@@ -48,7 +51,6 @@ $modalContainer.addEventListener('click', (e) => {
     initialize();
   } else if (e.target.matches('.btn-order')) {
     setActiveOrder(e);
-    footerRender(activeMenu);
   } else {
     return setPrice(e);
   }

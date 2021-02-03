@@ -1,6 +1,6 @@
 // order list
 // 주문내역 랜더 함수
-const render = (list) => {
+const render = list => {
   const $orderList = document.querySelector('.order-list');
   const $selectedItemNum = document.querySelector('.selected-item-num');
   const $totalPrice = document.querySelector('.total-price');
@@ -33,13 +33,47 @@ const render = (list) => {
   $orderList.innerHTML = orderHtml;
   $payList.innerHTML = payHtml;
 
-  $selectedItemNum.textContent = _list.length;
-  $totalPrice.textContent = _list.reduce((acc, cur) => acc + cur.price, 0);
+  $selectedItemNum.textContent = _list.length + '개';
+  $totalPrice.textContent = _list.reduce((acc, cur) => acc + cur.price, 0) + '원';
 
-  $totalItemNum.textContent = _list.length;
+  $totalItemNum.textContent = _list.length + '개';
   $totalItemPrice.textContent = $totalPrice.textContent;
 };
 
-// payment list
+// 남은 시간 영역
+const $leftTime = document.querySelector('.remaining-time');
+
+let num = 10;
+let timerId = null;
+$leftTime.textContent = num;
+
+const debounce = (callback, delay) => {
+  let timerId;
+
+  return event => {
+    if (timerId) clearTimeout(timerId);
+    timerId = setTimeout(callback, delay, event);
+  };
+};
+
+window.onmousemove = debounce(e => {
+  console.log(e.target.value);
+
+  if (timerId) {
+    clearInterval(timerId);
+    timerId = null;
+    num = 10;
+  }
+
+  timerId = setInterval(() => {
+    $leftTime.textContent = num;
+    num -= 1;
+
+    if (num === 0) {
+      console.log('새로고침&초기화면');
+      window.location.reload();
+    }
+  }, 1000);
+}, 300);
 
 export default render;

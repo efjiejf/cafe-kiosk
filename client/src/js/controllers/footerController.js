@@ -1,5 +1,5 @@
 import model from '../model/model';
-import * as footer from '../views/footer-render';
+import footerRender from '../views/footer-render';
 
 // 결제 모달 관련
 const $orderBtn = document.querySelector('.order-btn');
@@ -8,6 +8,28 @@ const $resultCancel = document.querySelector('.pay-result-cancel');
 const $modalDisplay = document.querySelector('.pay-modal-container');
 const $deleteAllItems = document.querySelector('.delete-all-items');
 const $orderList = document.querySelector('.order-list');
+
+// deleteAllItems
+const deleteAllItems = () => {
+  if (!model.menu.length) return;
+  model.menu = [];
+  footerRender(model.menu);
+};
+
+// removeItem
+const removeItem = (id) => {
+  model.menu = model.menu.filter((item) => item.id !== +id);
+  footerRender(model.menu);
+};
+
+// change order button color
+const changeButtonColor = () => {
+  if (model.menu.length) {
+    $orderBtn.classList.replace('order-btn-invalid', 'order-btn-valid');
+  } else {
+    $orderBtn.classList.replace('order-btn-valid', 'order-btn-invalid');
+  }
+};
 
 // 결제 모달 관련 이벤트 핸들러
 $orderBtn.onclick = () => {
@@ -33,46 +55,13 @@ $resultCancel.onclick = () => {
 };
 
 $deleteAllItems.onclick = () => {
-  footer.deleteAllItems();
+  deleteAllItems();
 };
 
 $orderList.onclick = (e) => {
-  if (e.target.classList.contains('.remove-item')) return;
-  footer.removeItem(e.target.parentNode.id);
+  if (!e.target.classList.contains('remove-item')) return;
+  console.log(e.target);
+  removeItem(e.target.parentNode.id);
 };
 
-// 남은 시간 영역
-const $leftTime = document.querySelector('.remaining-time');
-
-let num = 30;
-let timerId = null;
-$leftTime.textContent = num;
-
-const debounce = (callback, delay) => {
-  let timerId;
-
-  return (event) => {
-    if (timerId) clearTimeout(timerId);
-    timerId = setTimeout(callback, delay, event);
-  };
-};
-
-window.onclick = debounce((e) => {
-  console.log('디바운스 작동', e.target.value);
-
-  if (timerId) {
-    clearInterval(timerId);
-    timerId = null;
-    num = 30;
-  }
-
-  timerId = setInterval(() => {
-    $leftTime.textContent = num;
-    num -= 1;
-
-    if (num === 0) {
-      console.log('새로고침&초기화면');
-      window.location.reload();
-    }
-  }, 1000);
-}, 50);
+export default changeButtonColor;

@@ -1,13 +1,14 @@
 import model from '../model/model';
-import footerRender from '../views/footer-render';
+import * as footer from '../views/footer-render';
 
-// State
+//State
 let menus = [];
 
-// DOM
+
+//DOM
 const $modalContainer = document.querySelector('.menu-modal-container');
 
-// Function
+//Function
 const initialize = () => {
   model
     .getMenu(`/${model.state}`) //
@@ -42,7 +43,7 @@ const setActiveOrder = (e) => {
   initialize();
 };
 
-// Event
+//Event
 
 document.addEventListener('DOMContentLoaded', initialize);
 

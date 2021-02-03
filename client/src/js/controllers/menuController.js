@@ -7,7 +7,7 @@ const $menuList = document.querySelector('.menu-list');
 const $modalContainer = document.querySelector('.menu-modal-container');
 
 // EVENT
-$menuList.addEventListener('click', (e) => {
+$menuList.addEventListener('click', e => {
   if (e.target === e.currentTarget) return;
   $modalContainer.style.display = 'flex';
   model

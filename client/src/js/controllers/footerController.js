@@ -1,5 +1,6 @@
 import model from '../model/model';
 import footerRender from '../views/footer-render';
+import menus from './menuModalController';
 
 // 결제 모달 관련
 const $orderBtn = document.querySelector('.order-btn');

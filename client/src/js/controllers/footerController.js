@@ -37,7 +37,7 @@ $deleteAllItems.onclick = () => {
 };
 
 $orderList.onclick = (e) => {
-  if (e.target.classList.contains('.remove-item')) return;
+  if (!e.target.classList.contains('remove-item')) return;
   footer.removeItem(e.target.parentNode.id);
 };
 

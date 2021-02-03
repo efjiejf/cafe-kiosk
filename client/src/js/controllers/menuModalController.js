@@ -37,8 +37,9 @@ const setActiveOrder = (e) => {
     ...menus.find((menu) => menu.id === +e.target.parentNode.id),
   };
   target.active = true;
+  target.id = activeMenu.length;
   model.menu.push(target);
-  footer.render(model.menu);
+  footerRender(model.menu);
   initialize();
 };
 
@@ -56,3 +57,5 @@ $modalContainer.addEventListener('click', (e) => {
   }
   $modalContainer.style.display = 'none';
 });
+
+export default initialize;

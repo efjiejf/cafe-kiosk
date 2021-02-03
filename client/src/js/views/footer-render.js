@@ -52,6 +52,12 @@ const deleteAllItems = () => {
   render(model.menu);
 };
 
+// removeItem
+const removeItem = id => {
+  model.menu = model.menu.filter(item => item.id !== +id);
+  render(model.menu);
+};
+
 // 남은 시간 영역
 const $leftTime = document.querySelector('.remaining-time');
 
@@ -88,4 +94,4 @@ window.onmousemove = debounce(e => {
   }, 1000);
 }, 300);
 
-export { render, deleteAllItems };
+export { render, deleteAllItems, removeItem };

@@ -37,9 +37,9 @@ const setActiveOrder = (e) => {
     ...menus.find((menu) => menu.id === +e.target.parentNode.id),
   };
   target.active = true;
-  target.id = activeMenu.length;
+  target.id = model.menu.length;
   model.menu.push(target);
-  footerRender(model.menu);
+  footer.render(model.menu);
   initialize();
 };
 

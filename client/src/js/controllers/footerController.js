@@ -8,6 +8,7 @@ const $resultCheck = document.querySelector('.pay-result-check');
 const $resultCancel = document.querySelector('.pay-result-cancel');
 const $modalDisplay = document.querySelector('.pay-modal-container');
 const $deleteAllItems = document.querySelector('.delete-all-items');
+const $orderList = document.querySelector('.order-list');
 
 // 결제 모달 관련 이벤트 핸들러
 $orderBtn.onclick = () => {
@@ -24,4 +25,8 @@ $resultCancel.onclick = () => {
 
 $deleteAllItems.onclick = () => {
   footer.deleteAllItems();
+};
+
+$orderList.onclick = e => {
+  footer.removeItem(e.target.parentNode.id);
 };

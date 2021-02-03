@@ -1,19 +1,22 @@
+import model from '../model/model';
+
 // order list
 // 주문내역 랜더 함수
+const $orderList = document.querySelector('.order-list');
+const $selectedItemNum = document.querySelector('.selected-item-num');
+const $totalPrice = document.querySelector('.total-price');
+
+const $payList = document.querySelector('.pay-list');
+const $totalItemNum = document.querySelector('.total-item-num');
+const $totalItemPrice = document.querySelector('.total-item-price');
+
+let _list = [];
+
 const render = list => {
-  const $orderList = document.querySelector('.order-list');
-  const $selectedItemNum = document.querySelector('.selected-item-num');
-  const $totalPrice = document.querySelector('.total-price');
-
-  const $payList = document.querySelector('.pay-list');
-  const $totalItemNum = document.querySelector('.total-item-num');
-  const $totalItemPrice = document.querySelector('.total-item-price');
-
-  let _list = [];
   let orderHtml = '';
   let payHtml = '';
 
-  _list = list.filter((v) => v.active);
+  _list = list;
 
   _list.forEach(({ id, menuName, price }) => {
     orderHtml += `<li id="${id}" class="order-item">
@@ -38,12 +41,21 @@ const render = list => {
 
   $totalItemNum.textContent = _list.length + '개';
   $totalItemPrice.textContent = $totalPrice.textContent;
+
+  console.log('장바구니', _list);
+};
+
+// deleteAllItems
+const deleteAllItems = () => {
+  model.menu = [];
+
+  render(model.menu);
 };
 
 // 남은 시간 영역
 const $leftTime = document.querySelector('.remaining-time');
 
-let num = 10;
+let num = 30;
 let timerId = null;
 $leftTime.textContent = num;
 
@@ -57,12 +69,12 @@ const debounce = (callback, delay) => {
 };
 
 window.onmousemove = debounce(e => {
-  console.log(e.target.value);
+  console.log('디바운스 작동', e.target.value);
 
   if (timerId) {
     clearInterval(timerId);
     timerId = null;
-    num = 10;
+    num = 30;
   }
 
   timerId = setInterval(() => {
@@ -76,4 +88,4 @@ window.onmousemove = debounce(e => {
   }, 1000);
 }, 300);
 
-export default render;
+export { render, deleteAllItems };

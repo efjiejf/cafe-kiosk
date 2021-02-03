@@ -1,14 +1,14 @@
 import model from '../model/model';
-import footerRender from '../views/footer-render';
+import * as footer from '../views/footer-render';
 
-// State
+//State
 let menus = [];
-let activeMenu = [];
 
-// DOM
+
+//DOM
 const $modalContainer = document.querySelector('.menu-modal-container');
 
-// Function
+//Function
 const initialize = () => {
   model
     .getMenu(`/${model.state}`) //
@@ -22,9 +22,11 @@ const setPrice = (e) => {
 
   if (e.target.matches('.btn-size-up')) {
     target.price += target.sizeUpPrice;
+    target.menuName = `${target.menuName} / 사이즈 업 `;
     document.querySelector('.modal-price').textContent = `${target.price}원`;
   } else if (e.target.matches('.btn-addshot')) {
     target.price += target.shotPrice;
+    target.menuName = `${target.menuName} / 샷 추가 `;
     document.querySelector('.modal-price').textContent = `${target.price}원`;
   }
   e.target.disabled = true;
@@ -35,11 +37,12 @@ const setActiveOrder = (e) => {
     ...menus.find((menu) => menu.id === +e.target.parentNode.id),
   };
   target.active = true;
-  activeMenu.push(target);
+  model.menu.push(target);
+  footer.render(model.menu);
   initialize();
 };
 
-// Event
+//Event
 
 document.addEventListener('DOMContentLoaded', initialize);
 
@@ -48,7 +51,6 @@ $modalContainer.addEventListener('click', (e) => {
     initialize();
   } else if (e.target.matches('.btn-order')) {
     setActiveOrder(e);
-    footerRender(activeMenu);
   } else {
     return setPrice(e);
   }

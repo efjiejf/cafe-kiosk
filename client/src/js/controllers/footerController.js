@@ -1,6 +1,4 @@
-import model from '../model/model';
-import * as footer from '../views/footer-render';
-import menus from './menuModalController';
+import { deleteAllItems } from './menuModalController';
 
 // 결제 모달 관련
 const $orderBtn = document.querySelector('.order-btn');
@@ -11,17 +9,26 @@ const $deleteAllItems = document.querySelector('.delete-all-items');
 
 // 결제 모달 관련 이벤트 핸들러
 $orderBtn.onclick = () => {
-  $modalDisplay.classList.replace('footer-modal-invisible', 'footer-modal-visible');
+  $modalDisplay.classList.replace(
+    'footer-modal-invisible',
+    'footer-modal-visible'
+  );
 };
 
 $resultCheck.onclick = () => {
-  $modalDisplay.classList.replace('footer-modal-visible', 'footer-modal-invisible');
+  $modalDisplay.classList.replace(
+    'footer-modal-visible',
+    'footer-modal-invisible'
+  );
 };
 
 $resultCancel.onclick = () => {
-  $modalDisplay.classList.replace('footer-modal-visible', 'footer-modal-invisible');
+  $modalDisplay.classList.replace(
+    'footer-modal-visible',
+    'footer-modal-invisible'
+  );
 };
 
 $deleteAllItems.onclick = () => {
-  footer.deleteAllItems();
+  deleteAllItems();
 };

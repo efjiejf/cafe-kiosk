@@ -1,5 +1,3 @@
-import model from '../model/model';
-
 // order list
 // 주문내역 랜더 함수
 const $orderList = document.querySelector('.order-list');
@@ -12,7 +10,7 @@ const $totalItemPrice = document.querySelector('.total-item-price');
 
 let _list = [];
 
-const render = list => {
+const render = (list) => {
   let orderHtml = '';
   let payHtml = '';
 
@@ -37,19 +35,13 @@ const render = list => {
   $payList.innerHTML = payHtml;
 
   $selectedItemNum.textContent = _list.length + '개';
-  $totalPrice.textContent = _list.reduce((acc, cur) => acc + cur.price, 0) + '원';
+  $totalPrice.textContent =
+    _list.reduce((acc, cur) => acc + cur.price, 0) + '원';
 
   $totalItemNum.textContent = _list.length + '개';
   $totalItemPrice.textContent = $totalPrice.textContent;
 
   console.log('장바구니', _list);
-};
-
-// deleteAllItems
-const deleteAllItems = () => {
-  model.menu = [];
-
-  render(model.menu);
 };
 
 // 남은 시간 영역
@@ -62,13 +54,13 @@ $leftTime.textContent = num;
 const debounce = (callback, delay) => {
   let timerId;
 
-  return event => {
+  return (event) => {
     if (timerId) clearTimeout(timerId);
     timerId = setTimeout(callback, delay, event);
   };
 };
 
-window.onmousemove = debounce(e => {
+window.onmousemove = debounce((e) => {
   console.log('디바운스 작동', e.target.value);
 
   if (timerId) {
@@ -88,4 +80,4 @@ window.onmousemove = debounce(e => {
   }, 1000);
 }, 300);
 
-export { render, deleteAllItems };
+export default render;

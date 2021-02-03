@@ -6,17 +6,23 @@ import menuModalRender from '../views/modal-render';
 const $menuList = document.querySelector('.menu-list');
 const $modalContainer = document.querySelector('.menu-modal-container');
 
+// Function
+const getMenu = async (url, callback) => {
+  try {
+    const menu = await model.getMenu(url);
+    callback(menu);
+  } catch (e) {
+    console.error(e);
+  }
+};
+
 // EVENT
-$menuList.addEventListener('click', e => {
+$menuList.addEventListener('click', (e) => {
   if (e.target === e.currentTarget) return;
   $modalContainer.style.display = 'flex';
-  model
-    .getMenu(`/${model.state}/${e.target.id}`) //
-    .then(menuModalRender);
+  getMenu(`/${model.state}/${e.target.id}`, menuModalRender); //
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  model
-    .getMenu(`/${model.state}`) //
-    .then(menuRender);
+  getMenu(`/${model.state}`, menuRender); //
 });

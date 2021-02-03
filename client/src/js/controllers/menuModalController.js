@@ -1,20 +1,21 @@
 import model from '../model/model';
-import * as footer from '../views/footer-render';
+import footerRender from '../views/footer-render';
 
 //State
 let menus = [];
-
+let orderMenu = [];
 
 //DOM
 const $modalContainer = document.querySelector('.menu-modal-container');
 
 //Function
-const initialize = () => {
-  model
-    .getMenu(`/${model.state}`) //
-    .then((menu) => {
-      menus = menu;
-    });
+const initialize = async () => {
+  try {
+    const menu = await model.getMenu(`/${model.state}`);
+    menus = menu;
+  } catch (e) {
+    console.error(e);
+  }
 };
 
 const setPrice = (e) => {
@@ -37,10 +38,15 @@ const setActiveOrder = (e) => {
     ...menus.find((menu) => menu.id === +e.target.parentNode.id),
   };
   target.active = true;
-  target.id = activeMenu.length;
-  model.menu.push(target);
-  footerRender(model.menu);
+  target.id = orderMenu.length;
+  orderMenu.push(target);
+  footerRender(orderMenu);
   initialize();
+};
+
+export const deleteAllItems = () => {
+  orderMenu = [];
+  footerRender(orderMenu);
 };
 
 //Event

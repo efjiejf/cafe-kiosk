@@ -1,14 +1,15 @@
 .start-window{
   position: absolute;
   z-index: 99;
-  right: 1px; 
-  width: 990px;
-  height: 960px;
+  left: -10px;
+  width: 1000px;
+  height: 1000px;
   background-repeat: no-repeat;
   background-position-y: center;
+  background-size: contain;
   font-size: 10rem;
   font-weight: bold;
-  color: red;
+  background-color: white;
   user-select: none;
 }
 

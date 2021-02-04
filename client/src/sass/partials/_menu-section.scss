@@ -1,5 +1,6 @@
 .menu-list {
   width: 960px;
+  min-height: 470px;
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
@@ -112,7 +113,6 @@
 
   .modal {
     width: 500px;
-    //height: 420px;
     background: #fff;
     border-radius: 10px;
 

@@ -90,7 +90,7 @@ let data = {
       id: 1,
       menuName: '아메리카노',
       imgUrl:
-        'https://w7.pngwing.com/pngs/423/445/png-transparent-coffee-cup-caffe-americano-cafe-caffeine-brewed-coffee-cafe-coffee-brewed-coffee.png',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwgPamlyWWpAjYFh8by0lPIlEOJ6nJdq8dpA&usqp=CAU',
       price: 2000,
       active: false,
       shot: true,
@@ -101,7 +101,7 @@ let data = {
       id: 2,
       menuName: '라떼',
       imgUrl:
-        'https://w7.pngwing.com/pngs/423/445/png-transparent-coffee-cup-caffe-americano-cafe-caffeine-brewed-coffee-cafe-coffee-brewed-coffee.png',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwgPamlyWWpAjYFh8by0lPIlEOJ6nJdq8dpA&usqp=CAU',
       price: 3000,
       active: true,
       shot: true,

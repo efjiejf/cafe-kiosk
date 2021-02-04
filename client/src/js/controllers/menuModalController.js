@@ -1,5 +1,5 @@
 import model from '../model/model';
-import * as footer from '../views/footer-render';
+import footerRender from '../views/footer-render';
 
 //State
 let menus = [];
@@ -39,7 +39,7 @@ const setActiveOrder = (e) => {
   target.active = true;
   target.id = model.menu.length;
   model.menu.push(target);
-  footer.render(model.menu);
+  footerRender(model.menu);
   initialize();
 };
 

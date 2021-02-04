@@ -1,26 +1,17 @@
-import model from '../model/model';
+import changeButtonColor from '../controllers/footerController';
+
 // order list
 // 주문내역 랜더 식별자
 const $orderList = document.querySelector('.order-list');
 const $selectedItemNum = document.querySelector('.selected-item-num');
 const $totalPrice = document.querySelector('.total-price');
-const $orderBtn = document.querySelector('.order-btn');
+
 // 결제내역 랜더 식별자
 const $payList = document.querySelector('.pay-list');
 const $totalItemNum = document.querySelector('.total-item-num');
 const $totalItemPrice = document.querySelector('.total-item-price');
 
 let _list = [];
-
-// change order button color
-const changeButtonColor = () => {
-  if (model.menu.length) {
-    $orderBtn.classList.replace('order-btn-invalid', 'order-btn-valid');
-  } else {
-    $orderBtn.classList.replace('order-btn-valid', 'order-btn-invalid');
-  }
-};
-
 
 const render = (list) => {
   let orderHtml = '';
@@ -64,18 +55,4 @@ const render = (list) => {
   console.log('장바구니', _list);
 };
 
-// deleteAllItems
-const deleteAllItems = () => {
-  if (!model.menu.length) return;
-  model.menu = [];
-
-  render(model.menu);
-};
-
-// removeItem
-const removeItem = (id) => {
-  model.menu = model.menu.filter((item) => item.id !== +id);
-  render(model.menu);
-};
-
-export { render, deleteAllItems, removeItem, changeButtonColor };
+export default render;

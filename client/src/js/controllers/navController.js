@@ -3,6 +3,11 @@ import menuRender from '../views/menu-render';
 import initialize from './menuModalController';
 //DOM
 const $nav = document.querySelector('.menu-tab');
+const $home = document.querySelector('.btn-home');
+
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
 
 //Event
 $nav.onclick = (e) => {
@@ -14,8 +19,6 @@ $nav.onclick = (e) => {
   initialize();
 };
 
-// const changeTab = tab => {
-//   [...$nav.children].forEach(navList => navList.classList.remove('active'));
-//   tab.classList.add('active');
-//   render();
-// };
+$home.onclick = () => {
+  window.location.reload();
+};

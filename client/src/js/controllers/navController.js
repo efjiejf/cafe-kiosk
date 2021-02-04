@@ -5,10 +5,6 @@ import initialize from './menuModalController';
 const $nav = document.querySelector('.menu-tab');
 const $home = document.querySelector('.btn-home');
 
-function getKeyByValue(object, value) {
-  return Object.keys(object).find(key => object[key] === value);
-}
-
 //Event
 $nav.onclick = (e) => {
   if (e.target === e.currentTarget) return;

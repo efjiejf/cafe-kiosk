@@ -2,7 +2,7 @@
   width: 990px;
   height: 140px;
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 0;
   background-color: tomato;
   color: #ffffff;
   text-align: center;
@@ -84,38 +84,90 @@
           border-radius: 15px 15px 0 0;
         }
 
-        button:focus {
-          background-color: #eee;
+        .btn-active {
+          background-color: #ffffff;
           color: #000000;
         }
       }
     }
   }
 
-
-
-  .modal-container {
+  .dev-modal-container {
+    position: fixed;
+    // display: flex;
     display: none;
-    margin: 0 auto;
-    padding: 10px;
-    width: 900px;
-    height: 500px;
-    background-color: darkgray;
-    font-size: 1.2rem;
-    font-weight: bold;
-    opacity: 70%;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background: rgba(0, 0, 0, .3);
 
-    .btn-close {
-      cursor: pointer;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+    .dev-modal {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 500px;
+      height: 500px;
+      background: #fff;
+      border: 2px solid gray;
+      border-radius: 10px;
+      margin-bottom: 30%;
 
-    .modal-item {
-      font-size: 1rem;
-      margin-top: 50px;
+
+      .dev-modal-heading {
+        font-size: 2.0rem;
+        font-weight: bold;
+        color: tomato;
+        margin: 15px 0 15px 0;
+      }
+
+      .dev-modal-text {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 15px 0 15px 0;
+        color: tomato;
+      }
+
+      .dev-modal-input {
+        width: 360px;
+        color: #000000;
+        text-align: left;
+        font-weight: 700;
+        line-height: 2rem;
+        margin: 15px 0 15px 0;
+
+        .input-text {
+          width: 200px;
+        }
+
+        .input-price {
+          width: 70px;
+        }
+
+        .input-check {
+          cursor: pointer;
+        }
+      }
+
+      .dev-modal-btn {
+        margin: 15px 0 15px 0;
+        width: 390px;
+        display: flex;
+        justify-content: space-around;
+
+        button {
+          width: 100px;
+          height: 40px;
+          border: 0;
+          border-radius: 10px;
+          color: #ffffff;
+          background: tomato;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

@@ -28,38 +28,39 @@
           <i class="fas fa-angle-left"></i>
         </button>
         <ul class="menu-main list">
-          <li class="menu-item"><button class="trans" id="seaseonMenu">시즌 메뉴</button></li>
-          <li class="menu-item"><button class="trans" id="iceMenu">커피(HOT)</button></li>
-          <li class="menu-item"><button class="trans">커피(ICE)</button></li>
+          <li class="menu-item"><button id="seasonmenu" class="menu-btn trans btn-active">시즌 메뉴</button></li>
+          <li class="menu-item"><button id="hotmenu" class="menu-btn trans">커피(HOT)</button></li>
+          <li class="menu-item"><button id="icemenu" class="menu-btn trans">커피(ICE)</button></li>
         </ul>
         <button class="btn-right btn trans">
           <i class="fas fa-angle-right"></i>
         </button>
       </nav>
     </div>
-    <div class="modal-container">
-      <p>
-        Add beverages
-      </p>
-      <button class="btn-close btn">X</button>
-      <ul class="modal-list list">
-        <li id="1" class="modal-item">
-          <figure>
-            <img src="#" alt="#" />
-          </figure>
-          <label for="1">something</label>
-          <input id="1" class="price" type="number">
-          <i class="remove">x</i>
-        </li>
-        <li id="2" class="modal-item">
-          <figure>
-            <img src="#" alt="#" />
-          </figure>
-          <label for="2">something</label>
-          <input id="2" class="price" type="number">
-          <i class="remove">x</i>
-        </li>
-      </ul>
+    <div class="dev-modal-container">
+      <div class="dev-modal">
+        <h3 class="dev-modal-heading">신규 메뉴 추가</h3>
+        <p class="dev-modal-text">
+          새로운 상품을 추가해 주세요
+        </p>
+        <div class="dev-modal-input">
+          <form>
+            이름 <input class="dev-name input-text" type="text" placeholder="상품명 입력" autofocus/><br />
+            상품 가격 <input class="dev-price input-price" type="number" placeholder="가격 입력" />원<br />
+            사이즈 업 가능 여부 <input class="dev-size input-check" type="checkbox" /><br />
+            사이즈 업 가격 <input class="dev-size-price input-price" type="number" placeholder="가격 입력" />원<br />
+            샷 추가 가능 여부 <input class="dev-shot input-check" type="checkbox" /><br />
+            샷 추가 가격 <input class="dev-shot-price input-price" type="number" placeholder="가격 입력" />원<br />
+            이미지 업로드 <input class="dev-image-url input-text" type="url" placeholder="이미지 주소 입력" /><br />
+            이미지 첨부 <input class="dev-image-file" type="file" />
+          </form>
+        </div>
+        <div class="dev-modal-btn">
+          <button class="modal-storage">저장</button>
+          <button class="modal-remove">지우기</button>
+          <button class="modal-exit">닫기</button>
+        </div>
+      </div>      
     </div>
   </header>
   <main>

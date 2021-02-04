@@ -1,4 +1,19 @@
+.start-window{
+  position: absolute;
+  z-index: 99;
+  right: 1px; 
+  width: 990px;
+  height: 960px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  font-size: 10rem;
+  font-weight: bold;
+  color: red;
+  user-select: none;
+}
+
 .header {
+  position: relative;
   width: 960px;
   height: 140px;
   margin: 0 auto;
@@ -50,6 +65,7 @@
   grid-column: 2/5;
   margin-top: 15px;
   font-size: 2rem;
+  user-select: none;
 }
 
 .menu-tab {

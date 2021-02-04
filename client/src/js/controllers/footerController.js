@@ -41,10 +41,7 @@ $orderBtn.onclick = () => {
 };
 
 $resultCheck.onclick = () => {
-  $modalDisplay.classList.replace(
-    'footer-modal-visible',
-    'footer-modal-invisible'
-  );
+  window.location.reload();
 };
 
 $resultCancel.onclick = () => {

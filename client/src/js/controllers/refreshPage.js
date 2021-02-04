@@ -1,4 +1,4 @@
-import img from './windowImage.jpg';
+import img from './img.jpg';
 
 const $img = document.querySelector('.start-window');
 console.log(img);

@@ -44,7 +44,12 @@ $orderList.onclick = (e) => {
 // 결제 모달 띄우기 관련 이벤트
 $orderBtn.onclick = () => {
   if (!model.menu.length) return;
-  $modalDisplay.classList.replace('modal-invisible', 'modal-visible');
+
+  $modalDisplay.classList.replace(
+    'modal-invisible',
+    'modal-visible'
+  );
+
 };
 
 $resultCheck.onclick = () => {
@@ -52,13 +57,23 @@ $resultCheck.onclick = () => {
 };
 
 $resultCancel.onclick = () => {
-  $modalDisplay.classList.replace('modal-visible', 'modal-invisible');
+
+  $modalDisplay.classList.replace(
+    'modal-visible',
+    'modal-invisible'
+  );
+
 };
 
 $modalDisplay.onclick = (e) => {
   console.log(e.target, e.currentTarget);
   if (e.target === e.currentTarget) {
-    $modalDisplay.classList.replace('modal-visible', 'modal-invisible');
+
+    $modalDisplay.classList.replace(
+      'modal-visible',
+      'modal-invisible'
+    );
+
   }
 };
 
@@ -66,6 +81,7 @@ $modalDisplay.onclick = (e) => {
 window.addEventListener('beforeunload', function (e) {
   if (num === 0) return;
   if (!model.menu.length) return;
+  if ($modalDisplay.classList.contains('modal-visible')) return;
   e.preventDefault();
   e.returnValue = '';
 });

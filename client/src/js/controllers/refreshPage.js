@@ -13,10 +13,12 @@ window.onclick = () => {
   }
 
   timerId = setInterval(() => {
-    $leftTime.textContent = num;
     num -= 1;
+    $leftTime.textContent = num;
     if (num === 0) {
       window.location.reload();
     }
   }, 1000);
 };
+
+export default num;

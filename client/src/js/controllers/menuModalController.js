@@ -48,7 +48,7 @@ const setActiveOrder = (e) => {
 document.addEventListener('DOMContentLoaded', initialize);
 
 $modalContainer.addEventListener('click', (e) => {
-  if (e.target.matches('.btn-close')) {
+  if (e.target.matches('.btn-close') || e.target === e.currentTarget) {
     initialize();
   } else if (e.target.matches('.btn-order')) {
     setActiveOrder(e);

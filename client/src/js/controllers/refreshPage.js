@@ -16,9 +16,8 @@ window.onclick = () => {
     num -= 1;
     $leftTime.textContent = num;
     if (num === 0) {
+      num = 30;
       window.location.reload();
     }
   }, 1000);
 };
-
-export default num;

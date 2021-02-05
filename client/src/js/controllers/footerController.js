@@ -79,7 +79,6 @@ $modalDisplay.onclick = (e) => {
 
 // 주문 내역있을 시 새로고침 물어보기
 window.addEventListener('beforeunload', function (e) {
-  if (num === 0) return;
   if (!model.menu.length) return;
   if ($modalDisplay.classList.contains('modal-visible')) return;
   e.preventDefault();

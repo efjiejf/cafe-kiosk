@@ -55,7 +55,7 @@ $modalContainer.addEventListener('click', (e) => {
   } else {
     return setPrice(e);
   }
-  $modalContainer.style.display = 'none';
+  $modalContainer.classList.toggle('active');
 });
 
 export default initialize;

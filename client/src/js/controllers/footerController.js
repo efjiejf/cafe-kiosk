@@ -18,8 +18,8 @@ const deleteAllItems = () => {
 };
 
 // removeItem
-const removeItem = id => {
-  model.menu = model.menu.filter(item => item.id !== +id);
+const removeItem = (id) => {
+  model.menu = model.menu.filter((item) => item.id !== +id);
   footerRender(model.menu);
 };
 
@@ -36,7 +36,7 @@ $deleteAllItems.onclick = () => {
   deleteAllItems();
 };
 
-$orderList.onclick = e => {
+$orderList.onclick = (e) => {
   if (!e.target.classList.contains('remove-item')) return;
   removeItem(e.target.parentNode.id);
 };
@@ -44,10 +44,12 @@ $orderList.onclick = e => {
 // 결제 모달 띄우기 관련 이벤트
 $orderBtn.onclick = () => {
   if (!model.menu.length) return;
+
   $modalDisplay.classList.replace(
     'modal-invisible',
     'modal-visible'
   );
+
 };
 
 $resultCheck.onclick = () => {
@@ -55,19 +57,23 @@ $resultCheck.onclick = () => {
 };
 
 $resultCancel.onclick = () => {
+
   $modalDisplay.classList.replace(
     'modal-visible',
     'modal-invisible'
   );
+
 };
 
-$modalDisplay.onclick = e => {
+$modalDisplay.onclick = (e) => {
   console.log(e.target, e.currentTarget);
   if (e.target === e.currentTarget) {
+
     $modalDisplay.classList.replace(
       'modal-visible',
       'modal-invisible'
     );
+
   }
 };
 

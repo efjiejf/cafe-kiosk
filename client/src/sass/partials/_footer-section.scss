@@ -151,19 +151,24 @@
   width: 100vw;
   height: 100vw;
   background: rgba(0, 0, 0, .3);
-}
-
-.modal-visible {
+  transition: 0.3s;
   display: flex;
 }
 
+.modal-visible {
+  opacity: 1;
+  z-index: 99;
+}
+
 .modal-invisible {
-  display: none;
+  opacity: 0;
+  z-index: -10;
+
 }
 
 // 결제 모달창
 .pay-modal {
-  transform: translate(0, -70%);
+  transform: translate(0, -100%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -208,6 +213,7 @@
   border-radius: 10px;
   overflow-y: auto;
 }
+
 .pay-list::-webkit-scrollbar {
   width: 5px;
 }

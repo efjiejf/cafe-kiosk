@@ -25,7 +25,7 @@ console.log(img);
 $img.style.backgroundImage = `url(${img})`;
 
 $img.onclick = (e) => {
-  e.target.classList.add('footer-modal-invisible');
+  e.target.classList.add('modal-invisible');
 };
 
 // home 버튼 클릭 이벤트

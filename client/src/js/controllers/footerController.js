@@ -45,8 +45,8 @@ $orderList.onclick = e => {
 $orderBtn.onclick = () => {
   if (!model.menu.length) return;
   $modalDisplay.classList.replace(
-    'footer-modal-invisible',
-    'footer-modal-visible'
+    'modal-invisible',
+    'modal-visible'
   );
 };
 
@@ -56,8 +56,8 @@ $resultCheck.onclick = () => {
 
 $resultCancel.onclick = () => {
   $modalDisplay.classList.replace(
-    'footer-modal-visible',
-    'footer-modal-invisible'
+    'modal-visible',
+    'modal-invisible'
   );
 };
 
@@ -65,8 +65,8 @@ $modalDisplay.onclick = e => {
   console.log(e.target, e.currentTarget);
   if (e.target === e.currentTarget) {
     $modalDisplay.classList.replace(
-      'footer-modal-visible',
-      'footer-modal-invisible'
+      'modal-visible',
+      'modal-invisible'
     );
   }
 };
@@ -75,6 +75,7 @@ $modalDisplay.onclick = e => {
 window.addEventListener('beforeunload', function (e) {
   if (num === 0) return;
   if (!model.menu.length) return;
+  if ($modalDisplay.classList.contains('modal-visible')) return;
   e.preventDefault();
   e.returnValue = '';
 });

@@ -1,14 +1,3 @@
-import img from './img.jpg';
-
-const $img = document.querySelector('.start-window');
-console.log(img);
-
-$img.style.backgroundImage = `url(${img})`;
-
-$img.onclick = (e) => {
-  e.target.classList.add('footer-modal-invisible');
-};
-
 // 남은 시간 영역
 const $leftTime = document.querySelector('.remaining-time');
 

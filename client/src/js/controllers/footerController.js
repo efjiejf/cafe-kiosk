@@ -17,8 +17,8 @@ const deleteAllItems = () => {
 };
 
 // removeItem
-const removeItem = (id) => {
-  model.menu = model.menu.filter((item) => item.id !== +id);
+const removeItem = id => {
+  model.menu = model.menu.filter(item => item.id !== +id);
   footerRender(model.menu);
 };
 
@@ -31,7 +31,17 @@ const changeButtonColor = () => {
   }
 };
 
-// 결제 모달 관련 이벤트 핸들러
+$deleteAllItems.onclick = () => {
+  deleteAllItems();
+};
+
+$orderList.onclick = e => {
+  if (!e.target.classList.contains('remove-item')) return;
+  console.log(e.target);
+  removeItem(e.target.parentNode.id);
+};
+
+// 결제 모달 띄우기 관련 이벤트
 $orderBtn.onclick = () => {
   if (!model.menu.length) return;
   $modalDisplay.classList.replace(
@@ -51,14 +61,14 @@ $resultCancel.onclick = () => {
   );
 };
 
-$deleteAllItems.onclick = () => {
-  deleteAllItems();
-};
-
-$orderList.onclick = (e) => {
-  if (!e.target.classList.contains('remove-item')) return;
-  console.log(e.target);
-  removeItem(e.target.parentNode.id);
+$modalDisplay.onclick = e => {
+  console.log(e.target, e.currentTarget);
+  if (e.target === e.currentTarget) {
+    $modalDisplay.classList.replace(
+      'footer-modal-visible',
+      'footer-modal-invisible'
+    );
+  }
 };
 
 export default changeButtonColor;

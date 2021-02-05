@@ -1,4 +1,4 @@
-# Cafe Kiosk 개발 - 김연구, 최용훈
+# Cafe Kiosk 개발
 
 현재 메가 커피에서 실제로 사용하는 Easy Kiosk를 바탕으로 UI를 클론하였으며 키오스크의 기본 기능을 구현하였다.
 
@@ -43,6 +43,8 @@ UI 디자인은 메가커피 성수역점의 Easy Kiosk를 클론한다.
 - 소스 버전 관리 (Git)
 - 팀 컬래버레이션 (GitHub)
 
+<br>
+
 > 초기 화면
   - 초기 화면이며 클릭 시 메인 화면으로 진입한다.
 ![image](https://user-images.githubusercontent.com/56425514/107027114-0a256680-67ef-11eb-9024-9f75d390c94a.png)
@@ -69,3 +71,14 @@ UI 디자인은 메가커피 성수역점의 Easy Kiosk를 클론한다.
   - 주문 내역 결제 모달은 취소 뿐 아니라 외부 화면 클릭 이벤트 시 벗어날 수 있다.
   - 확인 버튼 클릭 시 페이지가 unload되며 초기화면으로 돌아간다.
 ![image](https://user-images.githubusercontent.com/56425514/107027246-350fba80-67ef-11eb-9bf8-8e54bdd427c0.png)
+
+<br>
+
+> 팀원
+- 조장: 김연구
+- 조원: 최용훈
+
+>Repo link
+https://github.com/yg-0103/cafe-kiosk
+> 발표 요약 자료
+https://slides.com/nyong/deck

@@ -166,7 +166,14 @@
           flex: 1;
           font-size: 17px;
           color: gray;
+
+          &::after {
+            content: '*';
+            color: red;
+            margin-left: 5px;
+          }
         }
+
 
         .dev-shot {
           height: 30px;

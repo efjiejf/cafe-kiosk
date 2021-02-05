@@ -36,10 +36,15 @@ const setMenu = async (e) => {
       sizeUpPrice: +$menuSizeUpPrice.value,
     };
     const newMenus = await model.setMenu(`/${model.state}`, newMenu);
-    console.log(newMenus);
     menuRender(newMenus);
     initailize();
+    $menuName.value = '';
+    $menuImg.value = '';
+    $menuPrice.value = '';
+    $menuShotPrice.value = '';
+    $menuSizeUpPrice.value = '';
     $menuSetModal.style.display = 'none';
+    $addShotCheck.checked = false;
   } catch (e) {
     console.error(e);
   }
@@ -53,6 +58,22 @@ $menuSet.addEventListener('click', (e) => {
 $modalClose.addEventListener('click', (e) => {
   $menuSetModal.style.display = 'none';
 });
+
+$menuSetModal.addEventListener('click', (e) => {
+  if (e.target === e.currentTarget) {
+    if (window.confirm('작성한 내용이 사라집니다. 이동하시겠습니까?')) {
+      $menuSetModal.style.display = 'none';
+    }
+  }
+});
+
+document.body.onbeforeunload = () => {
+  if ($menuSetModal.style.display === 'flex') {
+    return window.confirm('작성한 내용이 사라집니다. 이동하시겠습니까?')
+      ? window.location.reload()
+      : '';
+  }
+};
 
 $menuSave.addEventListener('click', setMenu);
 

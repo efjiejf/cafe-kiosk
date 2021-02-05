@@ -90,7 +90,7 @@ let data = {
       id: 1,
       menuName: '아메리카노',
       imgUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwgPamlyWWpAjYFh8by0lPIlEOJ6nJdq8dpA&usqp=CAU',
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkOCiG2M6pYP4WwObGZBo68s2GyQT0-5CZiw&usqp=CAU',
       price: 2000,
       active: false,
       shot: true,
@@ -101,7 +101,7 @@ let data = {
       id: 2,
       menuName: '라떼',
       imgUrl:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwgPamlyWWpAjYFh8by0lPIlEOJ6nJdq8dpA&usqp=CAU',
+        'https://lh3.googleusercontent.com/proxy/XN-zK5fK5WKw38CpkRrnWS_zUPe2UpTAf-6PfseazphWhUtJPQvJj52hjFxliF1NOTCtE9Cte1iSOF-z3AJah12crZGN7YJOzXgmDUbKPUgAFGocmsc',
       price: 3000,
       active: true,
       shot: true,
@@ -114,6 +114,16 @@ let data = {
       imgUrl:
         'https://images.freeimages.com/images/premium/previews/6086/60863340-cup-of-chamomile-tea-with-chamomile-flowers-and-lemon-isolated.jpg',
       price: 4000,
+      active: true,
+      shot: false,
+      shotPrice: 1000,
+      sizeUpPrice: 1000,
+    },
+    {
+      id: 4,
+      menuName: '유자차',
+      imgUrl: 'http://image.auction.co.kr/itemimage/19/a7/4d/19a74d0ae6.jpg',
+      price: 5000,
       active: true,
       shot: false,
       shotPrice: 1000,

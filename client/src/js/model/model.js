@@ -4,11 +4,23 @@ export default {
   _state: 'seasonmenu',
   menu: [],
 
-  getMenu(url) {
-    return axios.get(url).then(({ data }) => data);
+  async getMenu(url) {
+    try {
+      const { data } = await axios.get(url);
+
+      return data;
+    } catch (e) {
+      console.error(e);
+    }
   },
-  setMenu(url, payload) {
-    return axios.post(url, payload).then(({ data }) => data);
+  async setMenu(url, payload) {
+    try {
+      const { data } = await axios.post(url, payload);
+
+      return data;
+    } catch (e) {
+      console.error(e);
+    }
   },
   get state() {
     return this._state;

@@ -1,5 +1,6 @@
 import model from '../model/model';
 import footerRender from '../views/footer-render';
+import num from './refreshPage';
 
 // 결제 모달 관련
 const $orderBtn = document.querySelector('.order-btn');
@@ -37,7 +38,6 @@ $deleteAllItems.onclick = () => {
 
 $orderList.onclick = e => {
   if (!e.target.classList.contains('remove-item')) return;
-  console.log(e.target);
   removeItem(e.target.parentNode.id);
 };
 
@@ -70,5 +70,13 @@ $modalDisplay.onclick = e => {
     );
   }
 };
+
+// 주문 내역있을 시 새로고침 물어보기
+window.addEventListener('beforeunload', function (e) {
+  if (num === 0) return;
+  if (!model.menu.length) return;
+  e.preventDefault();
+  e.returnValue = '';
+});
 
 export default changeButtonColor;

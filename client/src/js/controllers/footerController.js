@@ -1,6 +1,5 @@
 import model from '../model/model';
 import footerRender from '../views/footer-render';
-import num from './refreshPage';
 
 // 결제 모달 관련
 const $orderBtn = document.querySelector('.order-btn');
@@ -45,11 +44,7 @@ $orderList.onclick = (e) => {
 $orderBtn.onclick = () => {
   if (!model.menu.length) return;
 
-  $modalDisplay.classList.replace(
-    'modal-invisible',
-    'modal-visible'
-  );
-
+  $modalDisplay.classList.replace('modal-invisible', 'modal-visible');
 };
 
 $resultCheck.onclick = () => {
@@ -57,23 +52,13 @@ $resultCheck.onclick = () => {
 };
 
 $resultCancel.onclick = () => {
-
-  $modalDisplay.classList.replace(
-    'modal-visible',
-    'modal-invisible'
-  );
-
+  $modalDisplay.classList.replace('modal-visible', 'modal-invisible');
 };
 
 $modalDisplay.onclick = (e) => {
   console.log(e.target, e.currentTarget);
   if (e.target === e.currentTarget) {
-
-    $modalDisplay.classList.replace(
-      'modal-visible',
-      'modal-invisible'
-    );
-
+    $modalDisplay.classList.replace('modal-visible', 'modal-invisible');
   }
 };
 

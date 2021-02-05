@@ -43,8 +43,8 @@ const setMenu = async (e) => {
     $menuPrice.value = '';
     $menuShotPrice.value = '';
     $menuSizeUpPrice.value = '';
-    $menuSetModal.style.display = 'none';
     $addShotCheck.checked = false;
+    $menuSetModal.classList.toggle('active');
   } catch (e) {
     console.error(e);
   }
@@ -53,6 +53,7 @@ const setMenu = async (e) => {
 // Event
 $menuSet.addEventListener('click', (e) => {
   $menuSetModal.classList.toggle('active');
+  $menuSave.disabled = true;
 });
 
 $modalClose.addEventListener('click', (e) => {
@@ -68,7 +69,7 @@ $menuSetModal.addEventListener('click', (e) => {
 });
 
 document.body.onbeforeunload = () => {
-  if ($menuSetModal.style.opacity === '1') {
+  if ($menuSetModal.classList.contains('active')) {
     return window.confirm('작성한 내용이 사라집니다. 이동하시겠습니까?')
       ? window.location.reload()
       : '';

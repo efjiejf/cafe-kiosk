@@ -20,7 +20,7 @@ const getMenu = async (url, callback) => {
 // EVENT
 $menuList.addEventListener('click', (e) => {
   if (e.target === e.currentTarget) return;
-  $modalContainer.style.display = 'flex';
+  $modalContainer.classList.toggle('active');
   getMenu(`/${model.state}/${e.target.id}`, menuModalRender); //
 });
 

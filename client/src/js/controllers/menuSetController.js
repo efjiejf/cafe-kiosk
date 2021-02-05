@@ -52,23 +52,23 @@ const setMenu = async (e) => {
 
 // Event
 $menuSet.addEventListener('click', (e) => {
-  $menuSetModal.style.display = 'flex';
+  $menuSetModal.classList.toggle('active');
 });
 
 $modalClose.addEventListener('click', (e) => {
-  $menuSetModal.style.display = 'none';
+  $menuSetModal.classList.toggle('active');
 });
 
 $menuSetModal.addEventListener('click', (e) => {
   if (e.target === e.currentTarget) {
     if (window.confirm('작성한 내용이 사라집니다. 이동하시겠습니까?')) {
-      $menuSetModal.style.display = 'none';
+      $menuSetModal.classList.toggle('active');
     }
   }
 });
 
 document.body.onbeforeunload = () => {
-  if ($menuSetModal.style.display === 'flex') {
+  if ($menuSetModal.style.opacity === '1') {
     return window.confirm('작성한 내용이 사라집니다. 이동하시겠습니까?')
       ? window.location.reload()
       : '';

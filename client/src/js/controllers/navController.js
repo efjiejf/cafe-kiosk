@@ -8,9 +8,11 @@ const $nav = document.querySelector('.menu-tab');
 const $home = document.querySelector('.btn-home');
 
 // Event
-$nav.onclick = e => {
+$nav.onclick = (e) => {
   if (e.target === e.currentTarget) return;
-  [...$nav.children].forEach(navList => navList.classList.remove('btn-active'));
+  [...$nav.children].forEach((navList) =>
+    navList.classList.remove('btn-active')
+  );
 
   e.target.classList.add('btn-active');
   model._state = e.target.id;
@@ -25,7 +27,7 @@ console.log(img);
 $img.style.backgroundImage = `url(${img})`;
 
 $img.onclick = (e) => {
-  e.target.classList.add('footer-modal-invisible');
+  e.target.classList.add('modal-invisible');
 };
 
 // home 버튼 클릭 이벤트
